@@ -16,6 +16,7 @@ const createMenuItem = function(name, price, content) {
 const menu = function() {
     const content = document.querySelector('#content');
     const menuDiv = createElement('div', ['content-div', 'menu-div'], null, null);
+    const menuDivider = createElement('hr', ['about-hr'], null, null);
     const menuTitle = createElement('p', ['menu-title'], null, 'MENU');
     const menuGrid = createElement('div', ['menu-grid'], null, null);
 
@@ -26,6 +27,7 @@ const menu = function() {
     menuGrid.appendChild(createMenuItem('Espresso', '$7', 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.'));
 
     menuDiv.appendChild(menuTitle);
+    menuDiv.appendChild(menuDivider);
     menuDiv.appendChild(menuGrid);
     content.appendChild(menuDiv);
 }
