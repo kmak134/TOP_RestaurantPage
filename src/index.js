@@ -1,9 +1,11 @@
 import "./styles/styles.css";
+import svg from "./media/github.svg";
 import renderHome from "./pages/home";
 import renderMenu from "./pages/menu";
 import renderAbout from "./pages/about";
 
-const content = document.querySelector("#content");
+const content = document.querySelector("main");
+const footer = document.querySelector("footer");
 const homeButton = document.querySelector('#home-btn');
 const menuButton = document.querySelector('#menu-btn');
 const aboutButton = document.querySelector('#about-btn');
@@ -23,6 +25,18 @@ function createElement(type, classes, id, text) {
     return element;
 }
 
+function createFooter() {
+    const footerContent = createElement("p", ["footer-content"], null, "Made by Kevin Mak");
+    const githubSvg = createElement("a", ["footer-svg"], null, null);
+    githubSvg.href = "https://github.com/kmak134";
+    githubSvg.target = "blank";
+    githubSvg.rel = "noopener noreferrer";
+    githubSvg.innerHTML = svg;
+
+    footer.appendChild(footerContent);
+    footer.appendChild(githubSvg);
+
+}
 function displayHome() {
     content.innerHTML = "";
     renderHome();
@@ -50,6 +64,7 @@ aboutButton.addEventListener('click', () => {
     displayAbout();
 });
 
+createFooter();
 displayHome();
 
 

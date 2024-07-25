@@ -14,7 +14,7 @@ const createMenuItem = function(name, price, content) {
 }
 
 const menu = function() {
-    const content = document.querySelector('#content');
+    const content = document.querySelector('main');
     const menuDiv = createElement('div', ['content-div', 'menu-div'], null, null);
     const menuDivider = createElement('hr', ['about-hr'], null, null);
     const menuTitle = createElement('p', ['menu-title'], null, 'MENU');

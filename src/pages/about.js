@@ -2,7 +2,7 @@ import { createElement } from "../index";
 
 
 const about = function() {
-    const content = document.querySelector('#content');
+    const content = document.querySelector('main');
     const aboutDiv = createElement('div', ['content-div', 'about-div', null, null]);
     const aboutTitle = createElement('p', ['about-title'], null, 'ABOUT');
     const aboutDivider = createElement('hr', ['about-hr'], null, null);

@@ -1,7 +1,7 @@
 import { createElement } from "../index";
 
 const home = function() {
-    const content = document.querySelector('#content');
+    const content = document.querySelector('main');
 
     const homeDiv = createElement('div', ['content-div', 'home-div'], null, null);
     const homeTitle = createElement('p', ['home-title'], null, 'Coff Cafe');
